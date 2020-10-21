@@ -1,23 +1,10 @@
-Step 1 : Create User table 
-
-Fields : id (Primary key = Not null + Auto increment)
-            username (unique + not null)
-            password (not null)
-            created_at (time stamp with date and time)
-
-Step 2 : Create Config.php file which will hold db connection info
-
-Step 3 : Create SignUp.php form
-         - All fields require
-         - Need to show error for each fields
-         - Need to remove white space from all fields
-         - Same user name not allowed 
-         - Password should match 
-         - Password should ne at least 8 character
-         - Password hash for security 
-         - Use mysqli_stmt_bind_param
-    
-    1. Include DB file 
-    2. Define all variables
-    3.
+1. Signup {All validation, Password is in # formate in data base} 
+2. Login {All validation}
+3. Home Page {If quantity is 0 then out of stock}
+4. Cart.php {User can update quantity}
+5. Check out { Details }
+6. Process.php { Order Processing and save all info in DB}
          
+What left ? 
+
+- Need to put validation in Process.php form it should not allow null value.
