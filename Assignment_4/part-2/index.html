@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/client.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Nishi Surti</title>
+  </head>
+  <body>
+    <div id="show"></div>
+
+    <p>Username: &nbsp;<input id="username" type="text" name="username" /></p>
+    <p>Message: &nbsp;<input id="message" type="text" name="message" /></p>
+    <p>
+      <button id="submit" class="btn" type="button">Submit Message</button>
+      <script>
+        document.getElementById("submit").onclick = function () {
+          postdata();
+        };
+      </script>
+    </p>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    function postdata() {
+      var formdata = new FormData();
+      formdata.append("username", document.getElementById("username").value);
+
+      formdata.append("message", document.getElementById("message").value);
+
+      $.ajax({
+        data: formdata,
+        type: "POST",
+        url: "input.php",
+        contentType: false,
+        processData: false,
+      });
+    }
+    setInterval(getmessage, 1000);
+    function getmessage() {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("show").innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "message.php", true);
+      xmlhttp.send();
+    }
+  </script>
+</html>

@@ -1,0 +1,87 @@
+body {
+  font-family: "helvetica neue", verdana, helvetica, san-serif;
+  color: #2b86ec;
+  background: #cadfcf;
+}
+
+p.copy {
+  width: 390px;
+  margin: 0 auto;
+  text-align: right;
+  font-size: 0.8em;
+}
+
+h1 {
+  font-weight: 200;
+  position: absolute;
+  background: #80bca3;
+  border-bottom: 1px solid #447963;
+  color: #fff;
+  top: 0px;
+  width: 380px;
+  left: 0px;
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.coin p {
+  font-family: georgia;
+  font-style: italic;
+  position: absolute;
+  font-size: 28px;
+  z-index: 700;
+  top: -21px;
+  left: 8px;
+}
+
+.coin.silver p {
+  color: rgba(160, 160, 160, 1);
+}
+.coin.gold p {
+  color: rgba(242, 215, 50, 1);
+}
+
+.coin {
+  cursor: pointer;
+  content: "";
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+  top: 6px;
+  border-radius: 50px;
+  z-index: 500;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.silver {
+  background: linear-gradient(
+    45deg,
+    rgba(160, 160, 160, 1) 0%,
+    rgba(232, 232, 232, 1) 56%
+  );
+}
+
+.gold {
+  background: linear-gradient(
+    45deg,
+    rgba(242, 215, 12, 1) 0%,
+    rgba(255, 255, 255, 1) 56%,
+    rgba(252, 235, 0, 1) 96%
+  );
+}
+
+.btn {
+  margin: auto;
+
+  background: #2b86ec;
+  color: #fff;
+  border: 2px solid #2b86ec;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
